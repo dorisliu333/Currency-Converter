@@ -32,16 +32,9 @@ WHEN I click on a link of news <br />
 THEN I am presented with the detail of the news <br />
  <br />
 
-## **Github Account** 
- <br />
-
-[Github Account](https://github.com/realAdif/Currency-Converter)
-
- <br />
-
 ## **Deployed Site link**
  <br />
-https://realadif.github.io/Currency-Converter/
+https://dorisliu333.github.io/Currency-Converter/
  <br />
 
 ## **Screenshot of Deployed Site**
