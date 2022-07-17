@@ -1,122 +1,126 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css" />
-      <title>Crypto Converter</title>
-    </head>
-    <body>
-      <div id="header">
-        <h1>Currency Converter</h1>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div id="main" class="col-12 col-md-8">
-            <div class="row">
-                <div class="col description">Converts amounts from one currency to two others. You can choose to
-                display three different currencies, euros, yen, or dollars, and enter a
-                value in one currency to be converted into the other selected
-                currencies.
-            </div>
-          </div>
-          <div class="row">
-            <div class="col margin-around">
-              <section id="input">
-                <div id="numberOfCrypto">Currency From:</div>
-                <input id="amount" type="number" value="1" min="1" max="100" />
-                <select id="fromCurrency">
-                  <option>AUD</option>
-                  <option>USD</option>
-                  <option>AED</option>
-                  <option>INR</option>
-                  <option>CNY</option>
-                  <option>HKD</option>
-                  <option>NZD</option>
-                  <option>CAD</option>
-                  <option>EUR</option>
-                  <option>JPY</option>
-                </select>
-              </section>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col margin-around"> 
-              <section id="cryptoInput">
-                <div id="numberOfCrypto">Currency To:</div>
-                <select id="toCurrency">
-                  <option>AUD</option>
-                  <option>USD</option>
-                  <option>AED</option>
-                  <option>INR</option>
-                  <option>CNY</option>
-                  <option>HKD</option>
-                  <option>NZD</option>
-                  <option>CAD</option>
-                  <option>EUR</option>
-                  <option>JPY</option>
-                </select>
-            </div>
-          </div> 
-          <div class="row">
-            <div class="col margin-around">
-              <section id="ExchangeRate">
-                <div>Exchange Rate:</div>
-                <div id="rate"><br></div>
-                <div>Conversion Result:</div>
-                <div id="result"><br></div>
-              </section>
-              <button id="button">confirm to convert</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="'./css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Crypto Converter</title>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Currency Converter</h1>
+  </div>
+  <div class="container">
+    <div class="col">
+      <div id="upper" class="col-12">
+        <div class="col" id="description">Converts amounts from one currency to two others. You can choose to
+          display three different currencies, euros, yen, or dollars, and enter a
+          value in one currency to be converted into the other selected
+          currencies.
+        </div>
+        <div class="upper-left">
+          <div> Fast, secure money transfers</div>
+          <div> Live tracking and notifications </div>
+          <div>flexible delivery and payment options.</div>
+        </div>
+        <div class="main">
+          <div class="col margin-around">
+            <section id="input">
+              <div id="numberOfCrypto">Currency From:</div>
+              <input id="amount" type="number" value="1" min="1" max="10000" />
+              <select id="fromCurrency">
+                <option>AUD</option>
+                <option>USD</option>
+                <option>AED</option>
+                <option>INR</option>
+                <option>CNY</option>
+                <option>HKD</option>
+                <option>NZD</option>
+                <option>CAD</option>
+                <option>EUR</option>
+                <option>JPY</option>
+              </select>
             </section>
-            </div>
           </div>
+          <div class="col">
+            <section id="cryptoInput">
+              <div id="numberOfCrypto">Currency To:</div>
+              <select id="toCurrency">
+                <option>AUD</option>
+                <option>USD</option>
+                <option>AED</option>
+                <option>INR</option>
+                <option>CNY</option>
+                <option>HKD</option>
+                <option>NZD</option>
+                <option>CAD</option>
+                <option>EUR</option>
+                <option>JPY</option>
+              </select>
           </div>
-          <div class="col-md-1"></div>
-          <div class="col-12 col-md-3">
-            <div class="row">
-               <section id="news">
-              <span id="newsTitle">News Links</span>
-            <div id="newsLinks">
-              
-              <ul id="newsList"></ul>
-            </div>
-            <div class="mt-5" id="newsBottom">
+          <div class="col margin-around">
+            <section id="exchangeRate">
+              <div>Exchange Rate:</div>
+              <div id="rate"><br></div>
+              <div>Conversion Result:</div>
+              <div id="result"><br></div>
+            </section>
+            <button id="button">confirm to convert</button>
+            </section>
+          </div>
+        </div>
+      </div>
+          <section id="news">
+            <div id="newsTitle" >Currency News</div>
+            <div id="newsLinks" >
               <button id="btn_prev">Prev</button>
-              <span id="page"></span>
+              <ul id="newsList"></ul>
               <button id="btn_next">Next</button>
             </div>
+            <div class="newsBottom">
+              
+            </div>
           </section>
-            </div>
+      </div>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Error</h4>
+
         </div>
+        <div class="modal-body">
+          <p>You can not convert the same currency</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Error</h4>
-      
-            </div>
-            <div class="modal-body">
-              <p>You can not convert the same currency</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer id="footer">
-        <p>
-          Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby
-          Hurst, Michael Clancy © 2022
-        </p>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script src="scripts.js"></script>
-    </body>
-  </html>
+    </div>
+  </div>
+  <footer id="footer">
+    <p>
+      Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby
+      Hurst, Michael Clancy © 2022
+    </p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

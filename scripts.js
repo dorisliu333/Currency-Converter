@@ -62,6 +62,7 @@ function getNews() {
     fetch(newsUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
+                console.log(data)
                 newsItems = data.Data;
                 changePage(1);
             });
@@ -96,10 +97,14 @@ function changePage(page) {
     newsEl.innerHTML = "";
     for (var i = (page - 1) * records_per_page; i < (page * records_per_page); i++) {
         var newsLink = document.createElement('li');
+        var newsImage = document.createElement('img')
         var newsLinkEl = document.createElement('a')
+        newsImage.setAttribute('src',newsItems[i].source_info.img)
         newsLinkEl.setAttribute('href', newsItems[i].guid);
         var newsTitleEl = document.createElement('span');
+        newsTitleEl.setAttribute('id','newsSpan')
         newsTitleEl.innerHTML = newsItems[i].title;
+        newsLink.appendChild(newsImage);
         newsLinkEl.appendChild(newsTitleEl);
         newsLink.appendChild(newsLinkEl);
         newsEl.appendChild(newsLink)
